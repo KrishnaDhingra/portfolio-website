@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Poppins', sans-serif;    
+    background-color: #171717;
+}
+.navbar{
+    position: fixed;
+    height: 100vh;
+    width: 110px;
+    display: flex;
+    flex-direction: column;
+    background-color: #171717;
+    border-right: 1px solid #303030;
+    border-left: 1px solid #303030;
+}
+.navbar_first_section, .navbar_second_section{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.navbar_first_section{
+    padding: 3rem 0rem;
+    display: flex;
+    flex-basis: 75%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo_outer{
+    border: 3px solid white;
+    border-radius: 50%;
+    padding: 2px 12px;
+}
+.logo_text{
+    font-size: 1.2rem;
+}
+.logo_outer:hover{
+    transition: all 0.2s;
+    border: 3px solid rgb(141, 139, 139);
+    color: rgb(141, 139, 139);
+}
+.hamburger_outer{
+    margin-bottom: 9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.hamburger_lines{
+    height: 2px;
+    width: 25px;
+    background-color: white;
+    transition: all 0.2s;
+}
+.hamburger_outer:hover > #line1{
+    transform: translate(10px);
+}
+.hamburger_outer:hover > #line2{
+    transform: translate(-10px);
+}
+.navbar_second_section{
+    border-top: 1px solid #303030;
+    flex-basis: 25%;
+    justify-content: center;
+    align-items: center;
+}
+.navbar_second_section:hover{
+    transition: all 0.4s;
+    background-color: white;
+}
+.navbar_second_section:hover .work_with_me{
+    transition: all 0.4s;
+    color: black;
+}
+.work_with_me{
+    font-size: 1rem;
+    position: absolute;
+    width: 200px;
+    text-align: center;
+    color: white;
+    letter-spacing: 1px;
+    transform: rotate(-90deg);
+
+}
+
+@media only screen and (max-width: 1200px) {
+    .navbar{
+        position: relative;
+        flex-direction: row;
+        height: 90px;
+        width: 100vw;
+        border-top: 1px solid #303030;
+        border-bottom: 1px solid #303030;
+    }
+    .navbar_first_section{
+        flex-direction: row;
+        flex-basis: 100%;
+        padding: 0rem 5%;
+    }
+    .hamburger_outer{
+        margin-bottom: 0rem;
+    }
+    .navbar_second_section{
+        display: none;
+    }
+  }
