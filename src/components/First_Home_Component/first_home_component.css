@@ -22,12 +22,12 @@
     display: flex;
 }
 .home_text_left{
-    flex-basis: 88%;
+    flex-basis: 85%;
     line-height: 5.2rem;
     font-size: 4.475rem;
 }
 .home_text_right{
-    flex-basis: 12%;
+    flex-basis: 15%;
 }
 .home_button{
     font-family: 'Poppins', sans-serif;    

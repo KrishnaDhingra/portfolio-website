@@ -1,0 +1,42 @@
+.home_contact{
+    background-color: #765CFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    min-height: 95vh;
+    gap: 3rem;
+}
+.home_contact_text{
+    color: rgb(21, 21, 21);
+    width: 900px;
+    font-size: 3.125rem;
+    line-height: 58px;
+    text-align: center;
+}
+.home_contact_button{
+    font-family: 'Poppins', sans-serif;    
+    width: 13rem;
+    font-size: 1rem;
+    padding: 1.31rem 0rem;
+    color: #212121;
+    border: 1px solid #303033;
+    background-color: transparent;
+}
+.home_contact_button:hover{
+    transition: all 0.4s;
+    border: 1px solid white;
+    background-color: white;
+}
+@media only screen and (max-width: 1200px){
+    .home_contact_text{
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 600px){
+    .home_contact_text{
+        width: 85%;
+        font-size: 2.5rem;
+    }
+}

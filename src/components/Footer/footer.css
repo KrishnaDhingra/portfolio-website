@@ -1,9 +1,8 @@
-
 .footer{
     display: flex;
     box-sizing: border-box;
     padding: 4rem 0rem;
-    padding-right: 6%;
+    padding-right: 5%;
     gap: 7rem;
 }
 .top_container{
