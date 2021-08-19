@@ -1,0 +1,51 @@
+
+.footer{
+    display: flex;
+    box-sizing: border-box;
+    padding: 4rem 0rem;
+    padding-right: 6%;
+    gap: 7rem;
+}
+.top_container{
+    display: flex;
+    flex-direction: column;
+}
+.underline{
+    width: 100px;
+    height: 3.2px;
+    background-color: white;
+    margin-top: -4px;
+}
+.left_box, .middle_box, .right_box{
+    display: flex;
+    flex-basis: 33%;
+    flex-direction: column;
+    gap: 2rem;
+}
+.middle_box{
+    flex-basis: 25%;
+}
+.contact_text li{
+    margin-left: -40px;
+    list-style: none;
+}
+.contact_text{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.contact_text li:hover a{
+    transition: all 0.2s;
+    color: rgb(163, 159, 159);
+}
+@media only screen and (max-width: 1200px){
+    .footer{
+        padding-right: 0%;
+    }
+}
+@media only screen and (max-width: 1000px){
+    .footer{
+        flex-direction: column;
+        gap: 3rem;
+    }
+}
