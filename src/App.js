@@ -14,7 +14,7 @@ import './index.css'
 function App() {
   return (
     <Router>
-        <div className="App">
+        {/* <div className="App"> */}
 
           <Navbar></Navbar>
 
