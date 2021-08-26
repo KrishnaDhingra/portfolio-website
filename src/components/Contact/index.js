@@ -1,10 +1,15 @@
 import './contact.css';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
+import Aos from 'aos'
 import validator from 'validator';
 
 
 function Contact() {
-    
+
+    // useEffect(() =>{
+    //     Aos.init({duration: 1000, offset: 100});
+    //   }, [])
+
     const [num, setNum] = useState(0)
     const [name, setName] = useState('')
     const [show, setShow] = useState(false);
@@ -54,8 +59,8 @@ function Contact() {
     }
   return (
       <div className="contact">
-        <div className="contact_heading">I'll love to hear your suggestions</div>
-        <div className="input_container">
+        <div className="contact_heading"  data-aos="fade-up" data-aos-duration="1000" data-aos-offset="100">I'll love to hear your suggestions</div>
+        <div className="input_container"   data-aos="fade-up" data-aos-duration="1000" data-aos-offset="100">
 
             <div className="input_form">
                 <div className="input_form_text_container">

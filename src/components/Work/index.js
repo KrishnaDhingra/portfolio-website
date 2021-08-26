@@ -1,8 +1,14 @@
-import './work.css'
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
+import Aos from 'aos'
 import { buttons_data, project_data } from './work_data.js' 
+import './work.css'
 
 function Work() {
+
+    useEffect(() =>{
+        Aos.init({duration: 1000, offset: 100});
+      }, [])
+      
 
     const [value, setValue] = useState(0)
     
@@ -47,7 +53,7 @@ function Work() {
 
                     return(
     
-                        <div className="project">
+                        <div className="project" data-aos="fade-up">
                             <img className="project_image" src={element.image}/>
                             <span className="project_description">{element.description}</span>
                             <div className="technologies_used_container">

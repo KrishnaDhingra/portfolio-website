@@ -9,6 +9,8 @@ import Home_Service from './Services/Home/index.js'
 import Contact_Service from './Services/Contact/index.js'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './index.css'

@@ -1,9 +1,16 @@
+import React, {useEffect} from 'react';
 import './first_home_component.css'
 import { Link } from 'react-router-dom'
+import Aos from 'aos'
 
 function First_Home_Component() {
+
+  useEffect(() =>{
+    Aos.init({duration: 500, offset: 1});
+  }, [])
+  
   return (
-    <div className="first_home_component">
+    <div className="first_home_component" data-aos="fade-up">
 
       <div className="home_top_container">
         <div className="name">krishna</div>
