@@ -1,4 +1,5 @@
 import './first_home_component.css'
+import { Link } from 'react-router-dom'
 
 function First_Home_Component() {
   return (
@@ -10,10 +11,12 @@ function First_Home_Component() {
 
       <div className="home_bottom_container">
         <div className="home_text_container">
-          <div className="home_text_left">A digital studio creating experiences that work, for the people who matter.</div>
+          <div className="home_text_left">At vero eos et accusamus et iusto odio dignissimos ducimus qui</div>
           <div className="home_text_right"></div>
         </div>
-        <button className="home_button">My Work</button>
+        <Link to="/work">
+          <button className="home_button">My Work</button>
+        </Link>
       </div>
     </div>
 

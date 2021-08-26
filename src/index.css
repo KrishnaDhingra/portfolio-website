@@ -13,6 +13,13 @@ body{
 
 
 }
+::-webkit-scrollbar{
+    width: 7px;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(transparent, #765CFF);
+    border-radius: 6px;
+}
 @media only screen and (max-width: 1200px){
     .container{
         position: relative;

@@ -9,6 +9,7 @@ import Home_Service from './Services/Home/index.js'
 import Contact_Service from './Services/Contact/index.js'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import { Link } from 'react-router-dom'
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './index.css'
 function App() {
@@ -20,7 +21,7 @@ function App() {
 
           <div className="container">
 
-            <Link to='/home'>
+            <Link to='/'>
               <button>Home</button>
             </Link>
 
@@ -34,8 +35,8 @@ function App() {
 
 
             <Switch>
+              <Route path='/' exact component={Home_Service}/>
               <Route path='/work' exact component={Work_Service}/>
-              <Route path='/home' exact component={Home_Service}/>
               <Route path='/contact' exact component={Contact_Service}/>
             </Switch>
 
