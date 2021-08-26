@@ -36,11 +36,11 @@ function App() {
             </Link>
 
 
-            <Switch>
-              <Route path='/' exact component={Home_Service}/>
+            {/* <Switch> */}
+              <Route path={['/', '/portfolio-website']} exact component={Home_Service}/>
               <Route path='/work' exact component={Work_Service}/>
               <Route path='/contact' exact component={Contact_Service}/>
-            </Switch>
+            {/* </Switch> */}
 
             <Home_Contact></Home_Contact>
             <Footer></Footer>
