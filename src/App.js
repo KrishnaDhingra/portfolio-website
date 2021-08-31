@@ -23,7 +23,7 @@ function App() {
 
           <div className="container">
 
-            {/* <Link to='/'>
+            <Link to='/'>
               <button>Home</button>
             </Link>
 
@@ -33,7 +33,7 @@ function App() {
 
             <Link to='/contact'>
               <button>Contact</button>
-            </Link> */}
+            </Link>
 
 
             {/* <Switch> */}

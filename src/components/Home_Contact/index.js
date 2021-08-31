@@ -6,7 +6,7 @@ import Aos from 'aos'
 function Home_Contact() {
 
   useEffect(() =>{
-    Aos.init({duration: 1000, offset: 150});
+    Aos.init({duration: 1000, offset: 300});
   }, [])
   
 
