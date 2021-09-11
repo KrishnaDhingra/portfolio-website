@@ -13,7 +13,7 @@ function Home_Contact() {
   return (
     <div className="home_contact">
         <div className="home_contact_text" data-aos="fade-up">
-            I'll love to make something for you or your company
+            I'd love to make something for you or your company
         </div>
         <Link to="/contact">
           <button className="home_contact_button">Hire Me</button>
