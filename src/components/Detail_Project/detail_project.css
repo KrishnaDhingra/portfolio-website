@@ -3,7 +3,7 @@
     display: grid;
     width: calc(98vw - 219px);
     padding: 0rem 4rem;
-    padding-top: 5rem; 
+    padding-top: 5rem;
     box-sizing: border-box;
     height: 90vh;
     overflow: auto;
@@ -13,6 +13,7 @@
     grid-template-rows: 1fr;
     gap: 5rem;
     z-index: 3;
+    /* display: none; */
 }
 .hero_image{
     width: 100%;
@@ -28,7 +29,9 @@
     font-family: 'Poppins', sans-serif;    
     font-size: 1rem;
     border: 1px solid #333;
+    margin-right: 2rem;
     min-width: max-content;
+    max-width: 15rem;
 }
 .left_container_buttons:hover{
     transition: all 0.4s;
@@ -38,10 +41,6 @@
 .desktop{grid-area: desktop}
 .tablet{grid-area: tablet}
 .mobile{grid-area: mobile}
-.preview{
-    grid-area:preview;
-    background-color: #ED2C49;
-}
 .code{grid-area:code}
 .description{
     grid-area:description;
@@ -76,9 +75,10 @@
 .right_container > * {
     margin: 0px 0px;
 }
-.left_container_buttons{
-    margin-right: 2rem;
-    min-width: max-content;
+.preview{
+    grid-area:preview;
+    background-color: #ED2C49;
+    margin-right: 1rem;
 }
 @media only screen and (max-width: 1500px){
     .detail_project_container{
@@ -97,14 +97,54 @@
 @media only screen and (max-width: 900px){
     .detail_project_container{
         width: 99vw;
-        margin-left: -2.4rem;
+        margin-left: -2.1rem;
     }
 }
 @media only screen and (max-width: 700px){
     .detail_project_container{
-        padding: 0rem 2rem;
+        width: 100vw;
+        padding: 2rem 2rem;
+        margin-left: -1.7rem;
     }
     .left_container{
         grid-template-columns: 33% 33% 33% 1%;
     }
+}
+@media only screen and (max-width: 500px){
+    .left_container_buttons{
+        margin-right: 1rem;
+    }
+    .right_container{
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 7vh min-content 6vh;
+        row-gap: 2rem;
+        box-sizing: border-box;
+        grid-template-areas: 'heading heading'
+        'description description'
+        'preview code'
+        
+    ;
+    }
+}
+@media only screen and (max-width: 400px){
+    .detail_project_container{
+        margin-left: -1rem;
+        padding: 2rem 1rem;
+    }
+
+    .left_container, .right_container{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .hero_image{
+        margin-bottom: 1rem;
+    }
+    .left_container_buttons{
+        width: 100%;
+        padding: 0.5rem 2rem;
+        max-width: none;
+        margin: -0.7rem 0rem;
+    }
+
 }
