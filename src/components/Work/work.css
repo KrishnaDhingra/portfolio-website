@@ -33,6 +33,7 @@
     grid-gap: 4rem;
 }
 .project{
+    /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
     height: auto;
@@ -50,7 +51,7 @@
 .project_description{
     margin: 2rem 0rem;
     line-height: 2.4rem;
-    width: 80%;
+    width: 100%;
     font-size: 2rem;
 }
 .technologies_used_container{

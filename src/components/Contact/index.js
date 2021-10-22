@@ -1,14 +1,9 @@
 import './contact.css';
 import React, {useState, useEffect} from 'react';
-import Aos from 'aos'
 import validator from 'validator';
 
 
 function Contact() {
-
-    // useEffect(() =>{
-    //     Aos.init({duration: 1000, offset: 100});
-    //   }, [])
 
     const [num, setNum] = useState(0)
     const [name, setName] = useState('')

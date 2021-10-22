@@ -1,0 +1,110 @@
+.detail_project_container{
+    position: fixed;
+    display: grid;
+    width: calc(98vw - 219px);
+    padding: 0rem 4rem;
+    padding-top: 5rem; 
+    box-sizing: border-box;
+    height: 90vh;
+    overflow: auto;
+    background-color: rgb(20, 20, 20);
+    border-radius: 0.2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 5rem;
+    z-index: 3;
+}
+.hero_image{
+    width: 100%;
+    max-width: 19xvh;
+    border-radius: 0.4rem;
+    grid-area: hero_image
+}
+.left_container_buttons{
+    box-sizing: border-box;
+    background-color: transparent;
+    color: white;
+    border-radius: 99999px;
+    font-family: 'Poppins', sans-serif;    
+    font-size: 1rem;
+    border: 1px solid #333;
+    min-width: max-content;
+}
+.left_container_buttons:hover{
+    transition: all 0.4s;
+    background-color: white;
+    color: black;
+}
+.desktop{grid-area: desktop}
+.tablet{grid-area: tablet}
+.mobile{grid-area: mobile}
+.preview{
+    grid-area:preview;
+    background-color: #ED2C49;
+}
+.code{grid-area:code}
+.description{
+    grid-area:description;
+    line-height: 25.9px;
+}
+.heading{
+    grid-area: heading;
+}
+.left_container, .right_container{
+    display: grid;
+}
+.left_container{
+    grid-template-columns: 30% 30% 30% 10%;
+    grid-template-rows: max-content 6vh;
+    row-gap: 3rem;
+    grid-template-areas: 'hero_image hero_image hero_image hero_image'
+        'desktop tablet mobile .'
+        
+    ;
+}
+.right_container{
+    grid-template-columns: 35% 35% 20% 10%;
+    grid-template-rows: 7vh min-content 6vh;
+    row-gap: 2rem;
+    box-sizing: border-box;
+    grid-template-areas: 'heading heading heading heading'
+    'description description description description'
+    'preview code . .'
+    
+;
+}
+.right_container > * {
+    margin: 0px 0px;
+}
+.left_container_buttons{
+    margin-right: 2rem;
+    min-width: max-content;
+}
+@media only screen and (max-width: 1500px){
+    .detail_project_container{
+        grid-template-columns: 1fr;
+        padding-bottom: 3rem;
+    }
+}
+@media only screen and (max-width: 1200px){
+    .detail_project_container{
+        width: 96vw;
+        margin-top: -7.5rem;
+        margin-left: -2rem;
+        height: 98vh;
+    }
+}
+@media only screen and (max-width: 900px){
+    .detail_project_container{
+        width: 99vw;
+        margin-left: -2.4rem;
+    }
+}
+@media only screen and (max-width: 700px){
+    .detail_project_container{
+        padding: 0rem 2rem;
+    }
+    .left_container{
+        grid-template-columns: 33% 33% 33% 1%;
+    }
+}

@@ -9,9 +9,7 @@ import Home_Service from './Services/Home/index.js'
 import Contact_Service from './Services/Contact/index.js'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import Aos from 'aos'
 import 'aos/dist/aos.css'
-// import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './index.css'
 function App() {
@@ -22,19 +20,6 @@ function App() {
           <Navbar></Navbar>
 
           <div className="container">
-
-            <Link to='/'>
-              <button>Home</button>
-            </Link>
-
-            <Link to='/work'>
-              <button>Work</button>
-            </Link>
-
-            <Link to='/contact'>
-              <button>Contact</button>
-            </Link>
-
 
             <Switch>
               <Route path={['/', '/portfolio-website']} exact component={Home_Service}/>

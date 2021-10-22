@@ -21,15 +21,9 @@ body{
     border-right: 1px solid #303030;
     border-left: 1px solid #303030;
     z-index: 2;
-    animation-name: example2;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
+
 }
 
-@keyframes example2 {
-    from {background-color: #171717;}
-    to {background-color: #765CFF;}
-  }
 .navbar_first_section, .navbar_second_section{
     display: flex;
     flex-direction: row-reverse;
@@ -51,13 +45,14 @@ body{
     font-size: 1.2rem;
     color: white;
 }
-.link{
-    text-decoration: none;
-}
+
 .logo_outer:hover{
     transition: all 0.2s;
-    border: 3px solid rgb(141, 139, 139);
-    color: rgb(141, 139, 139);
+    border: 3px solid rgb(218, 216, 216);
+}
+.logo_outer:hover .logo_text{
+    transition: all 0.2s;
+    color: rgb(218, 216, 216);
 }
 .hamburger_outer{
     margin-bottom: 9rem;
@@ -66,9 +61,8 @@ body{
     gap: 7px;
 }
 .hamburger_lines{
-    height: 2px;
     width: 25px;
-    background-color: white;
+    border-top: 2px solid white;
     transition: all 0.2s;
 }
 .hamburger_outer:hover > #line1{
@@ -99,6 +93,7 @@ body{
     color: white;
     letter-spacing: 1px;
     transform: rotate(-90deg);
+    padding-left: 1rem;
 
 }
 
@@ -119,8 +114,6 @@ body{
     animation-name: example;
     animation-duration: 0.5s;
     flex-wrap: wrap;
-    animation-delay: 0.3s;
-    animation-iteration-count: 1;
     display: none;
 
 }
@@ -129,12 +122,6 @@ body{
     gap: 6rem;
     flex-direction: column;
 }
-
-
-@keyframes example {
-    from {left: -130%;}
-    to {left: 13.vh;}
-  }
 .navbar_dropdown li{
     list-style: none;
 }

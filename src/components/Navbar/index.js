@@ -10,7 +10,7 @@ function Navbar() {
                 <div className="navbar_first_section">
 
                     <div className="logo_outer">
-                        <Link className="link" to="/">
+                        <Link to="/">
                             <span className="logo_text">k</span>
                         </Link>
                     </div>

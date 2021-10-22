@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Aos from 'aos'
-import { buttons_data, project_data } from './work_data.js' 
+import { buttons_data, project_data } from './work_data.js'
+import DetailProject from '../Detail_Project/index.js'
 import './work.css'
 
 function Work() {
@@ -70,6 +71,8 @@ function Work() {
 
             })}
         </div>
+
+        <DetailProject></DetailProject>
 
     </div>
   );
