@@ -1,9 +1,40 @@
 import './detail_project.css';
 import React, {useState, useEffect} from 'react';
+import { motion } from 'framer-motion'
+import { IoClose } from "react-icons/io5";
 
-function DetailProject(){
+function DetailProject(props){
+
+    const dropIn = {
+        hidden: {
+            y: '-100vh'     
+        },
+        visible: {
+            y:'0vh',
+            transition:{
+                duration: 0.2,
+                type: "spring",
+                damping: 25,
+                stiffness: 400,
+            }
+        },
+        exit: {
+            y: '100vh'
+        }
+    }
     return(
-        <div className="detail_project_container">
+
+        <motion.div
+            className="detail_project_container"
+            variants={dropIn}
+            initial='hidden'
+            animate='visible'
+            exit='exit'
+
+            onClick={(e) => e.stopPropagation()}
+        >
+            <IoClose className="close-button" onClick={props.handleClose}/>
+
             <div className="left_container">
                 <img className="hero_image" src="https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/qjvxdujiq2594nunbhar.jpg" alt="" />
                 <button className="desktop left_container_buttons">Desktop</button>
@@ -18,7 +49,7 @@ function DetailProject(){
                 <button className="code left_container_buttons">View Code</button>
             </div>
 
-        </div>
+        </motion.div>
     )
 }
 export default DetailProject

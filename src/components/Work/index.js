@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import Aos from 'aos'
+import { motion, AnimatePresence } from 'framer-motion'
 import { buttons_data, project_data } from './work_data.js'
 import DetailProject from '../Detail_Project/index.js'
 import './work.css'
@@ -12,6 +13,10 @@ function Work() {
       
 
     const [value, setValue] = useState(0)
+    const [ modalOpen, setModalOpen ] = useState(false)
+
+    const close = () => setModalOpen(false)
+    const open = () => setModalOpen(true)
     
     let show = (e) =>{
 
@@ -54,7 +59,14 @@ function Work() {
 
                     return(
     
-                        <div className="project" data-aos="fade-up">
+                        <div 
+                            className="project" data-aos="fade-up"
+                            onClick={
+                                (e) =>{
+                                    e.stopPropagation()
+                                    modalOpen ? close() : open()
+                            }}
+                        >
                             <img className="project_image" src={element.image}/>
                             <span className="project_description">{element.description}</span>
                             <div className="technologies_used_container">
@@ -72,7 +84,17 @@ function Work() {
             })}
         </div>
 
-        <DetailProject></DetailProject>
+        <AnimatePresence
+
+            initial={false}
+            exitBeforeEnter={true}
+            onExitComplete={() => null}
+
+        >
+
+            { modalOpen && <DetailProject modalOpen={modalOpen} handleClose={close}/> }
+
+        </AnimatePresence>
 
     </div>
   );

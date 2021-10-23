@@ -31,14 +31,6 @@ export let project_data = [
     },
     {
         show: true,
-        category: 'single page',
-        image: 'https://www.frontendmentor.io/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdz209s6jk%2Fimage%2Fupload%2Fv1580921397%2FChallenges%2Fqkpgcsmter7tah2sjdij.jpg&w=828&q=75',
-        description: 'Manage landing page',
-        technologies_used: ['HTML5', 'CSS3', 'JAVASCRIPT']
-        
-    },
-    {
-        show: true,
         category: 'multi page',
         image: 'https://www.frontendmentor.io/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdz209s6jk%2Fimage%2Fupload%2Fv1602776662%2FChallenges%2Fblitjo9cbnmtbaybeiys.jpg&w=828&q=75',
         description: 'Designo multi page website',

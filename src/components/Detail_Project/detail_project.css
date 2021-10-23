@@ -4,6 +4,8 @@
     width: calc(98vw - 219px);
     padding: 0rem 4rem;
     padding-top: 5rem;
+    margin-top: -0.5rem;
+    padding-bottom: 4rem;
     box-sizing: border-box;
     height: 90vh;
     overflow: auto;
@@ -13,7 +15,13 @@
     grid-template-rows: 1fr;
     gap: 5rem;
     z-index: 3;
-    /* display: none; */
+}
+.close-button{
+    color: white;
+    margin: 0.7rem 0.7rem;
+    right: 0;
+    position: absolute;
+    transform: scale(1.7);
 }
 .hero_image{
     width: 100%;
@@ -70,7 +78,7 @@
     'description description description description'
     'preview code . .'
     
-;
+    ;
 }
 .right_container > * {
     margin: 0px 0px;
@@ -83,7 +91,6 @@
 @media only screen and (max-width: 1500px){
     .detail_project_container{
         grid-template-columns: 1fr;
-        padding-bottom: 3rem;
     }
 }
 @media only screen and (max-width: 1200px){
@@ -124,14 +131,14 @@
         'preview code'
         
     ;
-    }
+}
 }
 @media only screen and (max-width: 400px){
     .detail_project_container{
         margin-left: -1rem;
         padding: 2rem 1rem;
     }
-
+    
     .left_container, .right_container{
         display: flex;
         flex-direction: column;
@@ -146,5 +153,5 @@
         max-width: none;
         margin: -0.7rem 0rem;
     }
-
+    
 }
