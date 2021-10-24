@@ -1,9 +1,26 @@
 import './detail_project.css';
+import { project_detail } from '../Work/work_data.js'
 import React, {useState, useEffect} from 'react';
 import { motion } from 'framer-motion'
 import { IoClose } from "react-icons/io5";
 
-function DetailProject(props){
+function DetailProject({modalOpen, handleClose, project_name}){
+
+    const [ imageView, setImageView ] = useState('desktop')
+
+    console.log({project_name})
+
+    let detailedProjectData = ''
+
+    detailedProjectData = project_detail.filter(e => e.name == project_name)
+    detailedProjectData = detailedProjectData[0]
+
+    let image = ''
+    let website_url = detailedProjectData.website_url
+    let code_url = detailedProjectData.code_url
+    let desktop_image = detailedProjectData.desktop_image
+    let tablet_image = detailedProjectData.tablet_image
+    let mobile_image = detailedProjectData.mobile_image
 
     const dropIn = {
         hidden: {
@@ -33,13 +50,13 @@ function DetailProject(props){
 
             onClick={(e) => e.stopPropagation()}
         >
-            <IoClose className="close-button" onClick={props.handleClose}/>
+            <IoClose className="close-button" onClick={handleClose}/>
 
             <div className="left_container">
-                <img className="hero_image" src="https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/qjvxdujiq2594nunbhar.jpg" alt="" />
-                <button className="desktop left_container_buttons">Desktop</button>
-                <button className="tablet left_container_buttons">Tablet</button>
-                <button className="mobile left_container_buttons">Mobile</button>
+                <img className="hero_image" src='https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/ax9kvjgksws1lz8vrlim.jpg' alt="" />
+                <button className="desktop left_container_buttons" onClick={() => {setImageView('desktop')}}>Desktop</button>
+                <button className="tablet left_container_buttons" onClick={() => setImageView('tablet')}>Tablet</button>
+                <button className="mobile left_container_buttons" onClick={() => setImageView('mobile')}>Mobile</button>
 
             </div>
             <div className="right_container">

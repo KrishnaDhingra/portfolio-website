@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Aos from 'aos'
 import { motion, AnimatePresence } from 'framer-motion'
-import { buttons_data, project_data } from './work_data.js'
+import { buttons_data, project_data, project_detail } from './work_data.js'
 import DetailProject from '../Detail_Project/index.js'
 import './work.css'
 
@@ -14,6 +14,7 @@ function Work() {
 
     const [value, setValue] = useState(0)
     const [ modalOpen, setModalOpen ] = useState(false)
+    const [ projectName, setProjectName ] = useState('')
 
     const close = () => setModalOpen(false)
     const open = () => setModalOpen(true)
@@ -25,7 +26,6 @@ function Work() {
             if(e.target.innerHTML.toLowerCase() === 'all'){
                 element.show = true
                 setValue(value + 1)
-                console.log(element.show)
             }else{
                 if(element.category === e.target.innerHTML.toLowerCase()){
 
@@ -41,6 +41,8 @@ function Work() {
 
         
     }
+
+
   return (
     <div className="work">
         <div className="button_container">
@@ -65,6 +67,7 @@ function Work() {
                                 (e) =>{
                                     e.stopPropagation()
                                     modalOpen ? close() : open()
+                                    setProjectName(element.description)
                             }}
                         >
                             <img className="project_image" src={element.image}/>
@@ -92,7 +95,18 @@ function Work() {
 
         >
 
-            { modalOpen && <DetailProject modalOpen={modalOpen} handleClose={close}/> }
+            { modalOpen && <DetailProject
+                modalOpen={modalOpen}
+                handleClose={close} 
+                project_name={projectName}
+                // description={detailedProjectData ? detailedProjectData.description : ''}
+                // website_url={detailedProjectData ? detailedProjectData.website_url : ''}
+                // code_url={detailedProjectData ? detailedProjectData.code_url : ''}
+                // desktop_image={detailedProjectData ? detailedProjectData.desktop_image : ''}
+                // tablet_image={detailedProjectData ? detailedProjectData.tablet_image : ''}
+                // mobile_image={detailedProjectData ? detailedProjectData.mobile_image : ''}
+                />
+             }
 
         </AnimatePresence>
 
