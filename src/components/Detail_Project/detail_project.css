@@ -18,7 +18,7 @@
 }
 .close-button{
     color: white;
-    margin: 0.7rem 0.7rem;
+    margin: 1rem 1rem;
     right: 0;
     position: absolute;
     transform: scale(1.7);
@@ -40,6 +40,9 @@
     margin-right: 2rem;
     min-width: max-content;
     max-width: 15rem;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
 }
 .left_container_buttons:hover{
     transition: all 0.4s;

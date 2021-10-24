@@ -27,21 +27,21 @@ export let project_data = [
         category: 'e-commerce',
         image: 'https://www.frontendmentor.io/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdz209s6jk%2Fimage%2Fupload%2Fv1619786082%2FChallenges%2Fax9kvjgksws1lz8vrlim.jpg&w=828&q=75',
         description: 'Audiophile e-commerce website',
-        technologies_used: ['REACT', 'REACT ROUTER', 'CSS']
+        technologies_used: ['REACT', 'REACT ROUTER', 'FRAMER MOTION']
     },
     {
         show: true,
         category: 'multi page',
         image: 'https://www.frontendmentor.io/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdz209s6jk%2Fimage%2Fupload%2Fv1602776662%2FChallenges%2Fblitjo9cbnmtbaybeiys.jpg&w=828&q=75',
         description: 'Designo multi page website',
-        technologies_used: ['REACT', 'REACT ROUTER', 'CSS', 'STYLED COMP']
+        technologies_used: ['REACT', 'REACT ROUTER', 'TAILWIND', 'FRAMER MOTION']
     },
     {
         show: true,
         category: 'multi page',
         image: 'https://www.frontendmentor.io/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdz209s6jk%2Fimage%2Fupload%2Fv1597957737%2FChallenges%2Fbflu1myynk7j8quyezyc.jpg&w=828&q=75',
         description: 'Arch multi page website',
-        technologies_used: ['REACT', 'REACT ROUTER', 'CSS', 'STYLED COMP']
+        technologies_used: ['REACT', 'REACT ROUTER', 'TAILWIND', 'FRAMER MOTION']
     },
     {
         show: true,
@@ -55,7 +55,7 @@ export let project_data = [
         category: 'multi page',
         image: 'https://www.frontendmentor.io/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fdz209s6jk%2Fimage%2Fupload%2Fq_auto%2Cw_700%2FChallenges%2Fbgjwz6i6nfnqngx7ae36.jpg&w=640&q=75',
         description: 'Photosnap multi page website',
-        technologies_used: ['REACT ROUTER', 'CSS', 'STYLED COMP']
+        technologies_used: ['REACT', 'REACT ROUTER', 'TAILWIND', 'STYLED COMP']
     },
     {
         show: true,
@@ -69,7 +69,7 @@ export let project_data = [
         category: 'single page',
         image: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/ug3acx3rt7hms1renszu.jpg',
         description: 'Dine restaurant website',
-        technologies_used: ['CSS3', 'REACT', 'STYLED COMP']
+        technologies_used: ['REACT', 'REACT ROUTER', 'STYLED COMP']
     },
     {
         show: true,
