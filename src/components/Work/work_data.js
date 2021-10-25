@@ -113,7 +113,7 @@ export const project_detail = [
     },
     {
         desktop_image:'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/wirxeocmd6tpnn9c5oqc.jpg',
-        tablet_image: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/wirxeocmd6tpnn9c5oqc.jpg',
+        tablet_image: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/yoceoj7gmuyvk0bf0wwf.jpg',
         mobile_image: 'https://res.cloudinary.com/dz209s6jk/image/upload/q_auto:good,w_900/Challenges/yoceoj7gmuyvk0bf0wwf.jpg',
         name: 'REST Countries Api',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus perspiciatis ullam minima quo impedit totam provident, dolorum sapiente quae suscipit in, reprehenderit tenetur dolorem asperiores numquam hic. A dolores saepe ipsam omnis esse facere quaerat blanditiis! Beatae id molestiae minima hic veritatis alias consectetur eum quaerat facilis ducimus? Distinctio fugiat dolores odit iste quis esse repudiandae doloremque. Aliquid repudiandae atque odit nam, eos sint, mollitia quibusdam magni ex consequuntur vel odio. Officiis quos eius quo recusandae molestiae unde dolorum aliquam nulla porro inventore dolore optio velit, consequuntur, minima voluptatum. Praesentium in accusantium expedita nam maiores ratione sequi voluptas. Iste, ab!',
