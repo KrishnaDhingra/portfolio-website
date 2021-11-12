@@ -73,22 +73,32 @@ function Navbar() {
                 <div className="links_outer">
                     <motion.div variants={listItem}>
                         <span>01</span>
-                        <li><a>Home</a></li>
+                        <Link className="link" to="/" onClick={() => setVisible("-120vw")}>
+                            <li><a>Home</a></li>
+                        </Link>
                     </motion.div>
+
                     <motion.div variants={listItem}>
                         <span>02</span>
-                        <li><a>About</a></li>
+                        <Link className="link" to="/about" onClick={() => setVisible("-120vw")}>
+                            <li><a>About</a></li>
+                        </Link>
                     </motion.div>
                 </div>
 
                 <div className="links_outer">
                     <motion.div variants={listItem}>
                         <span>03</span>
-                        <li><a>Work</a></li>
+                        <Link className="link" to="/work" onClick={() => setVisible("-120vw")}>
+                            <li><a>Work</a></li>
+                        </Link>
                     </motion.div>
+
                     <motion.div variants={listItem}>
                         <span>04</span>
-                        <li><a>Contact</a></li>
+                        <Link className="link" to="/contact" onClick={() => setVisible("-120vw")}>
+                            <li><a>Contact</a></li>
+                        </Link>
                     </motion.div>
                 </div>
             </motion.ul>

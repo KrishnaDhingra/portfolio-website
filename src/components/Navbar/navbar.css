@@ -122,6 +122,9 @@ body{
 .navbar_dropdown li{
     list-style: none;
 }
+.link{
+    text-decoration: none;
+}
 .navbar_dropdown li:hover a{
     color: rgb(73, 70, 70);
     transition: all 0.3s;
