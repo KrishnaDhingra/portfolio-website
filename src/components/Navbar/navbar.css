@@ -141,7 +141,7 @@ body{
 }
 @media only screen and (max-width: 1200px) {
     .navbar{
-        position: relative;
+        position: fixed;
         flex-direction: row;
         height: 90px;
         width: 100vw;
@@ -161,21 +161,23 @@ body{
     }
     .navbar_dropdown{
         position: fixed;
+        top: 0px;
         margin: 0 0;
         padding-left: 0vh;
         left: 0vh;
         justify-content: center;
         flex-direction: row;
         gap: 10rem;
-        width: 100vw;
+        width: 80vw;
         height: 100vh;
-    
+        z-index: 100000;
     }
   }
 @media only screen and (max-width: 700px){
     .navbar_dropdown{
         flex-direction: column;
         gap: 2.5rem;
+        /* height: calc(100vh - 90px) */
     }
     .links_outer{
         flex-direction: column;
@@ -184,15 +186,9 @@ body{
         width: 15rem;
     }
     .navbar_dropdown div li a{
-        font-size: 3rem;
+        font-size: 2rem;
     }
     .navbar_dropdown div span{
         display: none;
     }
 } 
-
-@media only screen and (max-width: 700px){
-    .navbar_dropdown div li a{
-        font-size: 2.5rem;
-    }
-}
