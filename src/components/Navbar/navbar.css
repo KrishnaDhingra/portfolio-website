@@ -36,22 +36,22 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-.logo_outer{
-    border: 3px solid white;
-    border-radius: 50%;
-    padding: 2px 12px;
-}
+
 .logo_text{
     font-size: 1.2rem;
     color: white;
     text-decoration: none;
+    border: 3px solid white;
+    border: 3px solid white;
+    border-radius: 50%;
+    padding: 2px 12px;
 }
 
-.logo_outer:hover{
+.logo_text:hover{
     transition: all 0.2s;
     border: 3px solid rgb(218, 216, 216);
 }
-.logo_outer:hover .logo_text{
+.logo_text:hover{
     transition: all 0.2s;
     color: rgb(218, 216, 216);
 }
@@ -95,6 +95,7 @@ body{
     letter-spacing: 1px;
     transform: rotate(-90deg);
     padding-left: 1rem;
+    text-decoration: none;
 
 }
 
@@ -158,4 +159,40 @@ body{
     .navbar_second_section{
         display: none;
     }
+    .navbar_dropdown{
+        position: fixed;
+        margin: 0 0;
+        padding-left: 0vh;
+        left: 0vh;
+        justify-content: center;
+        flex-direction: row;
+        gap: 10rem;
+        width: 100vw;
+        height: 100vh;
+    
+    }
   }
+@media only screen and (max-width: 700px){
+    .navbar_dropdown{
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+    .links_outer{
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+        width: 15rem;
+    }
+    .navbar_dropdown div li a{
+        font-size: 3rem;
+    }
+    .navbar_dropdown div span{
+        display: none;
+    }
+} 
+
+@media only screen and (max-width: 700px){
+    .navbar_dropdown div li a{
+        font-size: 2.5rem;
+    }
+}

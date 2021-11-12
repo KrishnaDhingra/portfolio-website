@@ -46,11 +46,8 @@ function Navbar() {
             <div className="navbar">
                 <div className="navbar_first_section">
 
-                    <div className="logo_outer">
-                        <Link to="/" className="logo_text" onClick={() => {setVisible("-120vw")}}>
-                            <span className="logo_text">k</span>
-                        </Link>
-                    </div>
+                    <Link to="/" className="logo_text" onClick={() => {setVisible("-120vw")}}>k</Link>
+
                     <div className="hamburger_outer" onClick={navbarFunc}>
                         <div className="hamburger_lines" id="line1"></div>
                         <div className="hamburger_lines" id="line2"></div>
@@ -58,9 +55,12 @@ function Navbar() {
 
 
                 </div>
-                <div className="navbar_second_section">
+
+                <Link to="/contact"  className="navbar_second_section" onClick={() => {setVisible("-120vw")}}>
+
                     <span className="work_with_me">Work With Me</span>
-                </div>
+
+                </Link>
 
 
             </div>

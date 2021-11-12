@@ -1,5 +1,5 @@
 import './footer.css'
-import { AiOutlineInstagram } from 'react-icons/ai';
+import { SiGmail } from "react-icons/si";
 import { FaDiscord } from 'react-icons/fa';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { FaWhatsapp } from 'react-icons/fa';
@@ -21,7 +21,7 @@ function Footer() {
                     <div className="underline"></div>
                 </div> 
                 <ul className="contact_text">
-                    <li className="contact_links"><a><AiOutlineInstagram className="logos"/>Instagram</a></li>
+                    <li className="contact_links"><a><SiGmail className="logos"/>Gmail</a></li>
                     <li className="contact_links"><a><FaDiscord className="logos"/>Discord</a></li>
                     <li className="contact_links"><a><FaLinkedinIn className="logos"/>Linkedin</a></li>
                     <li className="contact_links"><a><FaWhatsapp className="logos" />Whatsapp</a></li>
