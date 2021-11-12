@@ -99,7 +99,7 @@ body{
 
 .navbar_dropdown{
     position: fixed;
-    margin-top: -10px;
+    margin: 0 0;
     padding-left: 20vh;
     left: 13.3vh;
     align-items: center;
@@ -111,10 +111,7 @@ body{
     width: 100vw;
     height: 102vh;
     z-index: 1;
-    animation-name: example;
-    animation-duration: 0.5s;
     flex-wrap: wrap;
-    display: none;
 
 }
 .links_outer{

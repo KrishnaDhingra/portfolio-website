@@ -1,10 +1,47 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { motion } from "framer-motion"
 import './navbar.css'
 
 function Navbar() {
+
+    const [ visible, setVisible ] = useState("-120vw")
+
+    const navbarFunc = () => {
+        visible === "-120vw" ? setVisible("0vw") : setVisible("-120vw")
+        console.log(visible)
+    }
+    
+    const variant = {
+        hidden: {
+            x: "-120vw",
+            opacity: 0
+        },
+        visible: {
+            x: visible,
+            opacity: 1,
+            transition: {
+                type: "none",
+                duration: 0.3,
+                staggerChildren: 0.09
+            }
+        }
+    }
+    const listItem = {
+        hidden: {
+            x: '-120vw'
+        },
+        visible: {
+            x: visible,
+            transition: {
+                type: "spring",
+                stiffness: 700,
+                damping: 40   
+            }
+        }
+    }
     return (
-        <div className="navbar_outer">
+        <motion.div className="navbar_outer">
 
             <div className="navbar">
                 <div className="navbar_first_section">
@@ -14,7 +51,7 @@ function Navbar() {
                             <span className="logo_text">k</span>
                         </Link>
                     </div>
-                    <div className="hamburger_outer">
+                    <div className="hamburger_outer" onClick={navbarFunc}>
                         <div className="hamburger_lines" id="line1"></div>
                         <div className="hamburger_lines" id="line2"></div>
                     </div>
@@ -27,30 +64,35 @@ function Navbar() {
 
 
             </div>
-            <ul className="navbar_dropdown">
+            <motion.ul 
+                className="navbar_dropdown"
+                variants={variant}
+                initial="hidden"
+                animate="visible"
+            >
                 <div className="links_outer">
-                    <div>
+                    <motion.div variants={listItem}>
                         <span>01</span>
                         <li><a>Home</a></li>
-                    </div>
-                    <div>
+                    </motion.div>
+                    <motion.div variants={listItem}>
                         <span>02</span>
                         <li><a>About</a></li>
-                    </div>
+                    </motion.div>
                 </div>
 
                 <div className="links_outer">
-                    <div>
+                    <motion.div variants={listItem}>
                         <span>03</span>
                         <li><a>Work</a></li>
-                    </div>
-                    <div>
+                    </motion.div>
+                    <motion.div variants={listItem}>
                         <span>04</span>
                         <li><a>Contact</a></li>
-                    </div>
+                    </motion.div>
                 </div>
-            </ul>
-        </div>
+            </motion.ul>
+        </motion.div>
     )
 }
 export default Navbar
