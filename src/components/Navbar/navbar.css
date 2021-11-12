@@ -44,6 +44,7 @@ body{
 .logo_text{
     font-size: 1.2rem;
     color: white;
+    text-decoration: none;
 }
 
 .logo_outer:hover{

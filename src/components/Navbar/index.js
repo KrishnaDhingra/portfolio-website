@@ -47,7 +47,7 @@ function Navbar() {
                 <div className="navbar_first_section">
 
                     <div className="logo_outer">
-                        <Link to="/">
+                        <Link to="/" className="logo_text" onClick={() => {setVisible("-120vw")}}>
                             <span className="logo_text">k</span>
                         </Link>
                     </div>
