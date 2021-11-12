@@ -44,7 +44,7 @@ function Work() {
 
 
   return (
-    <div className="work">
+    <div className="work" onClick={close}>
         <div className="button_container">
 
             {buttons_data.map(element =>{
@@ -99,12 +99,6 @@ function Work() {
                 modalOpen={modalOpen}
                 handleClose={close} 
                 project_name={projectName}
-                // description={detailedProjectData ? detailedProjectData.description : ''}
-                // website_url={detailedProjectData ? detailedProjectData.website_url : ''}
-                // code_url={detailedProjectData ? detailedProjectData.code_url : ''}
-                // desktop_image={detailedProjectData ? detailedProjectData.desktop_image : ''}
-                // tablet_image={detailedProjectData ? detailedProjectData.tablet_image : ''}
-                // mobile_image={detailedProjectData ? detailedProjectData.mobile_image : ''}
                 />
              }
 
