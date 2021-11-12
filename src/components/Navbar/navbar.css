@@ -141,7 +141,7 @@ body{
 }
 @media only screen and (max-width: 1200px) {
     .navbar{
-        position: fixed;
+        position: relative;
         flex-direction: row;
         height: 90px;
         width: 100vw;
@@ -177,7 +177,8 @@ body{
     .navbar_dropdown{
         flex-direction: column;
         gap: 2.5rem;
-        /* height: calc(100vh - 90px) */
+        margin: 0 0;
+        height: 100vh
     }
     .links_outer{
         flex-direction: column;
