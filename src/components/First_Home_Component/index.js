@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import './first_home_component.css'
 import { Link } from 'react-router-dom'
 import Aos from 'aos'
+import Typewriter from "typewriter-effect";
 
 function First_Home_Component() {
 
@@ -18,7 +19,17 @@ function First_Home_Component() {
 
       <div className="home_bottom_container">
         <div className="home_text_container">
-          <div className="home_text_left">At vero eos et accusamus et iusto odio dignissimos ducimus qui</div>
+          <div
+            className="home_text_left">
+            Hello 👋<br /> I'm Krishna Dhingra, <br /> 
+
+            <span className="typing_text"><Typewriter
+              options={{
+                strings: ['Frontend Developer', 'Student'],
+                autoStart: true,
+                loop: true,
+              }}/></span>   
+          </div>
           <div className="home_text_right"></div>
         </div>
         <Link to="/work">

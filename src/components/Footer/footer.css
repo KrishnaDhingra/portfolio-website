@@ -37,6 +37,7 @@
 .contact_text li a{
     display: flex;
     align-items: center;
+    color: rgb(255, 255, 255);
 }
 .contact_text li:hover a{
     transition: all 0.2s;
