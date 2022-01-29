@@ -20,7 +20,7 @@ function Contact() {
 
   return (
       <div className="contact">
-        <div className="contact_heading"  data-aos="fade-up" data-aos-duration="1000" data-aos-offset="100">I'll love to hear your suggestions</div>
+        <div className="contact_heading" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="100">I'll love to hear your suggestions</div>
         <div className="input_container"   data-aos="fade-up" data-aos-duration="1000" data-aos-offset="100">
 
             <div className="input_form">
