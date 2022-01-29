@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 13rem;
+    z-index: 1;
 }
 .home_top_container{
     margin-top: 3.4rem;
@@ -36,6 +37,9 @@
 @media only screen and (max-width: 1200px){
     .home_top_container{
         display: none;
+    }
+    .first_home_component{
+        margin-top: 10rem;
     }
     .home_text_container{
         flex-direction: column;

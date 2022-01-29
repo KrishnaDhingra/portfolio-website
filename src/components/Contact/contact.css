@@ -59,6 +59,9 @@ input{
     color: white;
 }
 @media only screen and (max-width: 1200px){
+    .contact{
+        margin-top: 10rem;
+    }
     .input_form{
         width: 700px;
     }
@@ -79,6 +82,9 @@ input{
 @media only screen and (max-width: 500px){
     .contact_heading{
         font-size: 2.8rem;
+    }
+    .input_form_text, .input_form_invalid_text{
+        font-size: 0.8rem;
     }
 
 }

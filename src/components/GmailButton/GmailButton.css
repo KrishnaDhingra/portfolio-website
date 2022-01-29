@@ -6,6 +6,7 @@
     background-color: transparent;
     position: relative;
     overflow: hidden;
+    max-width: 90vw;
 }
 .icon_container, .mail_container{
     display: flex;

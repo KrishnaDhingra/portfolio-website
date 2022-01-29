@@ -80,6 +80,9 @@
     }
 }
 @media only screen and (max-width: 1200px){
+    .work{
+        margin-top: 10rem;
+    }
     .project_container{
         width: 100%;
     }

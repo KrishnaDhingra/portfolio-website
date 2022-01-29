@@ -20,6 +20,7 @@ body{
     background-color: #171717;
     border-right: 1px solid #303030;
     border-left: 1px solid #303030;
+    z-index: 2;
 }
 
 .navbar_first_section, .navbar_second_section{
@@ -145,6 +146,7 @@ body{
         width: 100vw;
         border-top: 1px solid #303030;
         border-bottom: 1px solid #303030;
+        z-index: 2;
     }
     .navbar_first_section{
         flex-direction: row;

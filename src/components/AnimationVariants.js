@@ -41,6 +41,7 @@ export const FadeinSide = () => {
         visible: {
             x: "0px",
             position: "fixed",
+            top: "0px",
             zIndex: 2,
             opacity: 1,
             transition: {
