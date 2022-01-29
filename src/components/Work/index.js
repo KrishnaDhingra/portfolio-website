@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Aos from 'aos'
-import { motion, AnimatePresence } from 'framer-motion'
-import { buttons_data, project_data, project_detail } from './work_data.js'
+import { AnimatePresence } from 'framer-motion'
+import { buttons_data, project_data } from './work_data.js'
 import DetailProject from '../Detail_Project/index.js'
 import './work.css'
 
@@ -12,34 +12,20 @@ function Work() {
       }, [])
       
 
-    const [value, setValue] = useState(0)
     const [ modalOpen, setModalOpen ] = useState(false)
     const [ projectName, setProjectName ] = useState('')
+    const [ projects, setProjects ] =  useState(project_data)
 
     const close = () => setModalOpen(false)
     const open = () => setModalOpen(true)
     
     let show = (e) =>{
-
-        project_data.map(element =>{
-
-            if(e.target.innerHTML.toLowerCase() === 'all'){
-                element.show = true
-                setValue(value + 1)
-            }else{
-                if(element.category === e.target.innerHTML.toLowerCase()){
-
-                    element.show = true
-                    setValue(value + 1)
-
-                }else{
-                    element.show = false
-                }
-            }
-
-        })
-
-        
+        if(e.target.innerHTML.toLowerCase() == 'all'){
+            setProjects(project_data)
+            return
+        }
+        const newProjects = project_data.filter((element) => element.category == e.target.innerHTML.toLowerCase())
+        setProjects(newProjects)
     }
 
 
@@ -55,34 +41,29 @@ function Work() {
         </div>
         
         <div className="project_container">
-            {project_data.map(element =>{
+            {projects.map(element =>{
 
-                if(element.show === true){
-
-                    return(
-    
-                        <div 
-                            className="project" data-aos="fade-up"
-                            onClick={
-                                (e) =>{
-                                    e.stopPropagation()
-                                    modalOpen ? close() : open()
-                                    setProjectName(element.description)
-                            }}
-                        >
-                            <img className="project_image" src={element.image}/>
-                            <span className="project_description">{element.description}</span>
-                            <div className="technologies_used_container">
-                                {element.technologies_used.map(element2 =>{
-                                    return(
-                                        <span className="technologies_used">{element2}</span>
-                                    )
-                                })}
-                            </div>
+                return(
+                    <div 
+                        className="project" data-aos="fade-up"
+                        onClick={
+                            (e) =>{
+                                e.stopPropagation()
+                                modalOpen ? close() : open()
+                                setProjectName(element.description)
+                        }}
+                    >
+                        <img className="project_image" src={element.image}/>
+                        <span className="project_description">{element.description}</span>
+                        <div className="technologies_used_container">
+                            {element.technologies_used.map(element2 =>{
+                                return(
+                                    <span className="technologies_used">{element2}</span>
+                                )
+                            })}
                         </div>
-                    )
-                }
-
+                    </div>
+                )
 
             })}
         </div>

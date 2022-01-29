@@ -19,6 +19,7 @@ function DetailProject({modalOpen, handleClose, project_name}){
     let desktop_image = detailedProjectData.desktop_image
     let tablet_image = detailedProjectData.tablet_image
     let mobile_image = detailedProjectData.mobile_image
+    let description = detailedProjectData.description
 
     if(imageView == 'desktop'){image = desktop_image}
     else if(imageView == 'tablet'){image = tablet_image}
@@ -63,7 +64,7 @@ function DetailProject({modalOpen, handleClose, project_name}){
             </div>
             <div className="right_container">
                 <h1 className="heading">Description</h1>
-                <p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus perspiciatis ullam minima quo impedit totam provident, dolorum sapiente quae suscipit in, reprehenderit tenetur dolorem asperiores numquam hic. A dolores saepe ipsam omnis esse facere quaerat blanditiis! Beatae id molestiae minima hic veritatis alias consectetur eum quaerat facilis ducimus? Distinctio fugiat dolores odit iste quis esse repudiandae doloremque. Aliquid repudiandae atque odit nam, eos sint, mollitia quibusdam magni ex consequuntur vel odio. Officiis quos eius quo recusandae molestiae unde dolorum aliquam nulla porro inventore dolore optio velit, consequuntur, minima voluptatum. Praesentium in accusantium expedita nam maiores ratione sequi voluptas. Iste, ab!</p>
+                <p className="description">{description}</p>
                 <a href={website_url} target="_blank" className="preview left_container_buttons">Preview Site</a>
                 <a href={code_url} target="_blank" className="code left_container_buttons">View Code</a>
             </div>
