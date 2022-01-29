@@ -13,7 +13,7 @@ body{
 }
 .navbar{
     position: fixed;
-    height: 100vh;
+    height: 102vh;
     width: 110px;
     display: flex;
     flex-direction: column;

@@ -1,3 +1,4 @@
+import React, { useState } from 'react'
 import Navbar from './components/Navbar/index.js'
 import First_Home_Component from './components/First_Home_Component/index.js'
 import Footer from './components/Footer/index.js'
@@ -9,7 +10,6 @@ import 'aos/dist/aos.css'
 import './index.css'
 
 function App() {
-
   return (
     <Router>
         <div className="App">
@@ -23,7 +23,7 @@ function App() {
               <Route path='/work' exact component={Work}/>
               <Route path='/contact' exact component={Contact}/>
             </Switch>
-
+            
             <Home_Contact/>
             <Footer/>
 

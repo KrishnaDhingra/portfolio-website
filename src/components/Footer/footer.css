@@ -1,62 +1,43 @@
 .footer{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     box-sizing: border-box;
     padding: 4rem 0rem;
-    padding-right: 5%;
-    gap: 7rem;
 }
-.top_container{
+section{
     display: flex;
-    flex-direction: column;
 }
-.underline{
-    width: 100px;
-    height: 3.2px;
-    background-color: white;
-    margin-top: -4px;
-}
-.left_box, .middle_box, .right_box{
+.section, .center{
     display: flex;
-    flex-basis: 33%;
-    flex-direction: column;
+    position: relative;
     gap: 2rem;
-}
-.middle_box{
-    flex-basis: 25%;
-}
-.contact_text li{
-    margin-left: -40px;
-    list-style: none;
-}
-.contact_text{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 0rem;
-}
-.contact_text li a{
-    display: flex;
     align-items: center;
-    color: rgb(255, 255, 255);
+    padding: 2rem 4rem;
+    border-top: 0.5px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
 }
-.contact_text li:hover a{
-    transition: all 0.2s;
-    color: rgb(163, 159, 159);
-    margin-left: 0.2rem;
+.center{
+    padding: 2rem 6rem;
 }
-.logos{
-    font-size: 1.4rem;
-    margin: auto 1rem;
-    margin-left: -0.2rem;
+.center > span{
+    font-weight: 700;
 }
-@media only screen and (max-width: 1200px){
-    .footer{
-        padding-right: 0%;
-    }
+.section:hover > *{
+    color: rgb(172, 166, 166)
 }
-@media only screen and (max-width: 1000px){
-    .footer{
-        flex-direction: column;
-        gap: 3rem;
-    }
+.section::before{
+    content: '';
+    position: absolute;
+    height: 70%;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    border-left: 0.5px solid rgba(255, 255, 255, 0.1);
+}
+.section:nth-child(2)::before{
+    display: none;
+}
+.icons{
+    transform: scale(1.3)
 }
