@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from "framer-motion"
+import { FadeinSide, ListItem, NavbarOpen } from '../AnimationVariants'
 import './navbar.css'
 
 function Navbar() {
@@ -9,39 +10,15 @@ function Navbar() {
 
     const navbarFunc = () => {
         visible === "-120vw" ? setVisible("0vw") : setVisible("-120vw")
-        console.log(visible)
     }
-    
-    const variant = {
-        hidden: {
-            x: "-120vw",
-            opacity: 0
-        },
-        visible: {
-            x: visible,
-            opacity: 1,
-            transition: {
-                type: "none",
-                duration: 0.3,
-                staggerChildren: 0.09
-            }
-        }
-    }
-    const listItem = {
-        hidden: {
-            x: '-120vw'
-        },
-        visible: {
-            x: visible,
-            transition: {
-                type: "spring",
-                stiffness: 700,
-                damping: 40   
-            }
-        }
-    }
+
     return (
-        <motion.div className="navbar_outer">
+        <motion.div 
+            className="navbar_outer" 
+            variants={FadeinSide()}
+            initial="hidden"
+            animate="visible"
+        >
 
             <div className="navbar">
                 <div className="navbar_first_section">
@@ -66,19 +43,19 @@ function Navbar() {
             </div>
             <motion.ul 
                 className="navbar_dropdown"
-                variants={variant}
+                variants={NavbarOpen(visible)}
                 initial="hidden"
                 animate="visible"
             >
                 <div className="links_outer">
-                    <motion.div variants={listItem}>
+                    <motion.div variants={ListItem(visible)}>
                         <span>01</span>
                         <Link className="link" to="/" onClick={() => setVisible("-120vw")}>
                             <li><a>Home</a></li>
                         </Link>
                     </motion.div>
 
-                    <motion.div variants={listItem}>
+                    <motion.div variants={ListItem(visible)}>
                         <span>02</span>
                         <Link className="link" to="/about" onClick={() => setVisible("-120vw")}>
                             <li><a>About</a></li>
@@ -87,14 +64,14 @@ function Navbar() {
                 </div>
 
                 <div className="links_outer">
-                    <motion.div variants={listItem}>
+                    <motion.div variants={ListItem(visible)}>
                         <span>03</span>
                         <Link className="link" to="/work" onClick={() => setVisible("-120vw")}>
                             <li><a>Work</a></li>
                         </Link>
                     </motion.div>
 
-                    <motion.div variants={listItem}>
+                    <motion.div variants={ListItem(visible)}>
                         <span>04</span>
                         <Link className="link" to="/contact" onClick={() => setVisible("-120vw")}>
                             <li><a>Contact</a></li>

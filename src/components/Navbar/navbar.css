@@ -13,15 +13,13 @@ body{
 }
 .navbar{
     position: fixed;
-    height: 102vh;
+    height: 100vh;
     width: 110px;
     display: flex;
     flex-direction: column;
     background-color: #171717;
     border-right: 1px solid #303030;
     border-left: 1px solid #303030;
-    z-index: 2;
-
 }
 
 .navbar_first_section, .navbar_second_section{
