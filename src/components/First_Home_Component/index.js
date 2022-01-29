@@ -1,9 +1,8 @@
-import React, {useEffect} from 'react';
+import React from 'react';
+import GmailButton from '../GmailButton/GmailButton'
 import './first_home_component.css'
-import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { FadeIn, FadeInExtreme } from '../AnimationVariants';
-import Aos from 'aos'
 import Typewriter from "typewriter-effect";
 
 function First_Home_Component() {
@@ -43,15 +42,7 @@ function First_Home_Component() {
           </motion.div>
           <div className="home_text_right"></div>
         </div>
-        <Link to="/work">
-          <motion.button 
-            className="home_button"
-            variants={FadeIn("up")}
-            initial="hidden"
-            animate="visible"
-          >My Work
-          </motion.button>
-        </Link>
+        <GmailButton/>
       </div>
     </div>
 

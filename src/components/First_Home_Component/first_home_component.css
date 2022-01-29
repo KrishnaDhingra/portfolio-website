@@ -30,45 +30,12 @@
 .home_text_right{
     flex-basis: 15%;
 }
-.home_button{
-    font-family: 'Poppins', sans-serif;    
-    width: 13rem;
-    font-size: 1rem;
-    padding: 2rem ;
-    color: white;
-    border: 1px solid #303033;
-    background-color: transparent;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-.home_button:hover{
-    transition: all 0.3s;
-    color: black;
-}
-.home_button::before{
-    content: '';
-    transition: all 0.3s;
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: -100%;
-    height: 100%;
-    width: 100%;
-    background-color: white;
-}
-.home_button:hover::before{
-    left: 0
-}
 .typing_text{
     color: rgb(231, 66, 94)
 }
 @media only screen and (max-width: 1200px){
     .home_top_container{
         display: none;
-    }
-    .home_bottom_container{
-        margin-top: 5rem;
     }
     .home_text_container{
         flex-direction: column;

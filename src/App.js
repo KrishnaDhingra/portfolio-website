@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Navbar from './components/Navbar/index.js'
 import First_Home_Component from './components/First_Home_Component/index.js'
 import Footer from './components/Footer/index.js'
@@ -23,7 +23,7 @@ function App() {
               <Route path='/work' exact component={Work}/>
               <Route path='/contact' exact component={Contact}/>
             </Switch>
-            
+
             <Home_Contact/>
             <Footer/>
 
