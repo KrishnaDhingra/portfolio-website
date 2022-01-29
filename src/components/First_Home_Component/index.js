@@ -25,7 +25,7 @@ function First_Home_Component() {
 
             <span className="typing_text"><Typewriter
               options={{
-                strings: ['Frontend Developer', 'Student'],
+                strings: ['Frontend Dev.', 'Blockchain Dev.', 'Student'],
                 autoStart: true,
                 loop: true,
               }}/></span>   
