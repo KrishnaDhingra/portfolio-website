@@ -82,3 +82,29 @@ export const ListItem = (visible) => {
         }
     }
 }
+export const HamburgerTopLine = (state) => {
+    return {
+        hidden: {
+            y: state ? "4px" : "0px",
+            rotate: state ? 45 : 0
+        },
+        visible: {
+            y: state ? "0px" : "4px",
+            rotate: state ? 0 : 45,
+            transition: { duration: 0.1}
+        }
+    }
+}
+export const HamburgerBottomLine = (state) => {
+    return {
+        hidden: {
+            y: state ? "-4px" : "0px",
+            rotate: state ? -45 : 0
+        },
+        visible: {
+            y: state ? "0px" : "-4px",
+            rotate: state ? 0 : -45,
+            transition: { duration: 0.1}
+        }
+    }
+}

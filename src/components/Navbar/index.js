@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from "framer-motion"
-import { FadeinSide, ListItem, NavbarOpen } from '../AnimationVariants'
+import { FadeinSide, ListItem, NavbarOpen, HamburgerTopLine, HamburgerBottomLine } from '../AnimationVariants'
 import './navbar.css'
 
 function Navbar() {
 
     const [ visible, setVisible ] = useState("-120vw")
+    const [ hamburgerState, setHamburgerState ] = useState(true)
 
     const navbarFunc = () => {
         visible === "-120vw" ? setVisible("0vw") : setVisible("-120vw")
@@ -25,9 +26,27 @@ function Navbar() {
 
                     <Link to="/" className="logo_text" onClick={() => {setVisible("-120vw")}}>k</Link>
 
-                    <div className="hamburger_outer" onClick={navbarFunc}>
-                        <div className="hamburger_lines" id="line1"></div>
-                        <div className="hamburger_lines" id="line2"></div>
+                    <div 
+                        className="hamburger_outer"
+                        onClick={() => {
+                            setHamburgerState(!hamburgerState)
+                            navbarFunc()
+                        }}
+                    >
+                        <motion.div 
+                            className="hamburger_lines" 
+                            id="line1"  
+                            variants={HamburgerTopLine(hamburgerState)} 
+                            initial="hidden" 
+                            animate="visible"
+                        ></motion.div>
+                        <motion.div 
+                            className="hamburger_lines"
+                            variants={HamburgerBottomLine(hamburgerState)} 
+                            id="line2"
+                            initial="hidden" 
+                            animate="visible"
+                        ></motion.div>
                     </div>
 
 

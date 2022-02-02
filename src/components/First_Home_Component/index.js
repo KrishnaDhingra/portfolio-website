@@ -7,12 +7,8 @@ import Typewriter from "typewriter-effect";
 
 function First_Home_Component() {
 
-  // useEffect(() =>{
-  //   Aos.init({duration: 500, offset: 15});
-  // }, [])
-
   const typeWriteOptions = {
-    strings: ['Frontend Dev.', 'Blockchain Dev.', 'Student'],
+    strings: ['Frontend Dev.', 'Blockchain Dev.', 'Freelancer', 'Student'],
     autoStart: true,
     loop: true,
   }
