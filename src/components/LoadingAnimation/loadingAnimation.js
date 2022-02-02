@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 function LoadingAnimation(){
     return (
         <div className="loading-animation-outer">
-            <motion.span className="loading-animation-text">K</motion.span>
+            <motion.span className="loading-animation-text">k</motion.span>
         </div>
     )
 }

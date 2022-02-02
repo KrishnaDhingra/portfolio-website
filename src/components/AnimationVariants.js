@@ -62,7 +62,7 @@ export const NavbarOpen = (visible) => {
             transition: {
                 type: "none",
                 duration: 0.3,
-                staggerChildren: 0.09
+                staggerChildren: 0.06
             }
         }
     }
@@ -77,7 +77,7 @@ export const ListItem = (visible) => {
             transition: {
                 type: "spring",
                 stiffness: 700,
-                damping: 40   
+                damping: 50   
             }
         }
     }
@@ -85,26 +85,26 @@ export const ListItem = (visible) => {
 export const HamburgerTopLine = (state) => {
     return {
         hidden: {
-            y: state ? "4px" : "0px",
-            rotate: state ? 45 : 0
+            y: state ? ["4px", "4px", "4px"] : ["0px", "0px", "4px"],
+            rotate: state ? [0, 0, 0, 45] : [0, 0, 0, 0]
         },
         visible: {
-            y: state ? "0px" : "4px",
-            rotate: state ? 0 : 45,
-            transition: { duration: 0.1}
+            y: state ? ["4px", "4px", "4px", "4px", "0px"] : ["4px", "4px", "4px"],
+            rotate: state ? [0, 0] : [0, 0, 0, 45],
+            transition: { duration: 0.3}
         }
     }
 }
 export const HamburgerBottomLine = (state) => {
     return {
         hidden: {
-            y: state ? "-4px" : "0px",
-            rotate: state ? -45 : 0
+            y: state ? ["-4px", "-4px", "-4px"] : ["0px", "0px", "0px"],
+            rotate: state ? [0, 0, 0, -45] : [0, 0, 0, 0]
         },
         visible: {
-            y: state ? "0px" : "-4px",
-            rotate: state ? 0 : -45,
-            transition: { duration: 0.1}
+            y: state ? ["-4px", "-4px", "-4px", "-4px", "0px"] : ["-4px", "-4px", "-4px"],
+            rotate: state ? [0, 0] : [0, 0, 0, -45],
+            transition: { duration: 0.3}
         }
     }
 }
