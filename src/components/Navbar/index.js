@@ -52,7 +52,10 @@ function Navbar() {
 
                 </div>
 
-                <Link to="/contact"  className="navbar_second_section" onClick={() => {setVisible("-120vw")}}>
+                <Link to="/contact"  className="navbar_second_section" onClick={() => {
+                    setVisible("-120vw")
+                    setHamburgerState(!hamburgerState)
+                }}>
 
                     <span className="work_with_me">Work With Me</span>
 
@@ -69,14 +72,20 @@ function Navbar() {
                 <div className="links_outer">
                     <motion.div variants={ListItem(visible)}>
                         <span>01</span>
-                        <Link className="link" to="/" onClick={() => setVisible("-120vw")}>
+                        <Link className="link" to="/" onClick={() => {
+                            setVisible("-120vw")
+                            setHamburgerState(!hamburgerState)
+                        }}>
                             <li><a>Home</a></li>
                         </Link>
                     </motion.div>
 
                     <motion.div variants={ListItem(visible)}>
                         <span>02</span>
-                        <Link className="link" to="/about" onClick={() => setVisible("-120vw")}>
+                        <Link className="link" to="/about" onClick={() => {
+                            setVisible("-120vw")
+                            setHamburgerState(!hamburgerState)
+                        }}>
                             <li><a>About</a></li>
                         </Link>
                     </motion.div>
@@ -85,14 +94,20 @@ function Navbar() {
                 <div className="links_outer">
                     <motion.div variants={ListItem(visible)}>
                         <span>03</span>
-                        <Link className="link" to="/work" onClick={() => setVisible("-120vw")}>
+                        <Link className="link" to="/work" onClick={() => {
+                            setVisible("-120vw")
+                            setHamburgerState(!hamburgerState)
+                        }}>
                             <li><a>Work</a></li>
                         </Link>
                     </motion.div>
 
                     <motion.div variants={ListItem(visible)}>
                         <span>04</span>
-                        <Link className="link" to="/contact" onClick={() => setVisible("-120vw")}>
+                        <Link className="link" to="/contact" onClick={() => {
+                            setVisible("-120vw")
+                            setHamburgerState(!hamburgerState)
+                        }}>
                             <li><a>Contact</a></li>
                         </Link>
                     </motion.div>
