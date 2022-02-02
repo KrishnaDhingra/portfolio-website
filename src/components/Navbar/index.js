@@ -8,7 +8,7 @@ function Navbar() {
 
     const [ visible, setVisible ] = useState("-120vw")
     const [ hamburgerState, setHamburgerState ] = useState(true)
-
+    
     const navbarFunc = () => {
         visible === "-120vw" ? setVisible("0vw") : setVisible("-120vw")
     }

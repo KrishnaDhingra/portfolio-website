@@ -5,18 +5,8 @@ body{
     height: 100vh;
     width: 100vw;
 }
-.progress-bar-container{
-    width: 7px;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    background-color: transparent;
-}
-.progress-bar{
-    width: 100%;
-    background-color: white;
+::-webkit-scrollbar {
+    display: none;
 }
 p, h1, h2, h3, h4, h5, h6, span, input, input::placeholder{
     font-family: 'Poppins', 'sans-serif';
@@ -33,16 +23,6 @@ input{
 
 
 }
-::-webkit-scrollbar {
-    display: none;
-}
-/* ::-webkit-scrollbar{
-    width: 7px;
-}
-::-webkit-scrollbar-thumb{
-    background: linear-gradient(transparent, #765CFF);
-    border-radius: 6px;
-} */
 @media only screen and (max-width: 1200px){
     .container{
         position: relative;

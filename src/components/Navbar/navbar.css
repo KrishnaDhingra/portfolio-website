@@ -35,7 +35,6 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-
 .logo_text{
     font-size: 1.2rem;
     color: white;
@@ -45,14 +44,9 @@ body{
     border-radius: 50%;
     padding: 2px 12px;
 }
-
 .logo_text:hover{
     transition: all 0.2s;
     border: 3px solid rgb(218, 216, 216);
-}
-.logo_text:hover{
-    transition: all 0.2s;
-    color: rgb(218, 216, 216);
 }
 .hamburger_outer{
     margin-bottom: 9rem;

@@ -1,0 +1,18 @@
+.loading-animation-outer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid white;
+    border-radius: 50%;
+}
+.loading-animation-text{
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: white;
+}

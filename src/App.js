@@ -5,6 +5,8 @@ import Footer from './components/Footer/index.js'
 import Home_Contact from './components/Home_Contact/index.js'
 import Contact from './components/Contact/index.js'
 import Work from './components/Work/index.js'
+import ProgressBar from './components/ProgressBar/progressBar.js'
+import LoadingAnimation from './components/LoadingAnimation/loadingAnimation.js'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import 'aos/dist/aos.css'
 import './index.css'
@@ -12,6 +14,7 @@ import './index.css'
 function App() {
 
   const [ scrollTop, setScrollTop ] = useState(0)
+  const [ loading, setLoading ] = useState(true)
 
   const onScroll = () => {
     const winScroll = document.documentElement.scrollTop
@@ -22,31 +25,36 @@ function App() {
   }
 
   useEffect(() => {
-    window.addEventListener("scroll", onScroll)
 
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 3000);
+
+    window.addEventListener("scroll", onScroll)
     return () => window.removeEventListener("scroll", onScroll)
   },  [])
 
   return (
-    <Router>
-        <div className="App">
+    <Router className="container">
+      {
+        loading ? <LoadingAnimation/> : 
+          <div>
+            <Navbar></Navbar>
+            <div className="container">
 
-          <Navbar></Navbar>
-          <div className="container">
+              <Switch>
+                <Route path='/' exact component={First_Home_Component}/>
+                <Route path='/work' exact component={Work}/>
+                <Route path='/contact' exact component={Contact}/>
+              </Switch>
 
-            <Switch>
-              <Route path='/' exact component={First_Home_Component}/>
-              <Route path='/work' exact component={Work}/>
-              <Route path='/contact' exact component={Contact}/>
-            </Switch>
-
-            <Home_Contact/>
-            <Footer/>
-            <div className="progress-bar-container">
-              <div className="progress-bar" style={{height: `${scrollTop}%`}}></div>
+              <Home_Contact/>
+              <Footer/>
+              <ProgressBar height={scrollTop}/>
             </div>
           </div>
-        </div>
+      }
     </Router>
   );
 }
