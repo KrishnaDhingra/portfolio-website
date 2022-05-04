@@ -7,56 +7,56 @@ import Contact from './components/Contact/index.js'
 import Work from './components/Work/index.js'
 import ProgressBar from './components/ProgressBar/progressBar.js'
 import LoadingAnimation from './components/LoadingAnimation/loadingAnimation.js'
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import 'aos/dist/aos.css'
-import './index.css'
+import './App.css'
 
 function App() {
-
-  const [ scrollTop, setScrollTop ] = useState(0)
-  const [ loading, setLoading ] = useState(true)
+  const [scrollTop, setScrollTop] = useState(0)
+  const [loading, setLoading] = useState(true)
 
   const onScroll = () => {
     const winScroll = document.documentElement.scrollTop
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight
+    const height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight
 
     const scrolled = (winScroll / height) * 100
     setScrollTop(scrolled)
   }
 
   useEffect(() => {
-
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
-    }, 2000);
+    }, 2600)
 
-    window.addEventListener("scroll", onScroll)
-    return () => window.removeEventListener("scroll", onScroll)
-  },  [])
+    window.addEventListener('scroll', onScroll)
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   return (
-    <Router className="container">
-      {
-        loading ? <LoadingAnimation/> : 
-          <div>
-            <Navbar></Navbar>
-            <div className="container">
+    <BrowserRouter className="container">
+      {loading ? (
+        <LoadingAnimation />
+      ) : (
+        <div>
+          <Navbar />
+          <div className="container">
+            <Routes>
+              <Route path="/" exact element={<First_Home_Component />} />
+              <Route path="/work" exact element={<Work />} />
+              <Route path="/contact" exact element={<Contact />} />
+            </Routes>
 
-              <Switch>
-                <Route path='/' exact component={First_Home_Component}/>
-                <Route path='/work' exact component={Work}/>
-                <Route path='/contact' exact component={Contact}/>
-              </Switch>
-
-              <Home_Contact/>
-              <Footer/>
-              <ProgressBar height={scrollTop}/>
-            </div>
+            <Home_Contact />
+            <Footer />
+            <ProgressBar height={scrollTop} />
           </div>
-      }
-    </Router>
-  );
+        </div>
+      )}
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App

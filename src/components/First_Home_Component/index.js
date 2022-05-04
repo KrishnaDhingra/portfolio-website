@@ -1,12 +1,11 @@
-import React from 'react';
+import React from 'react'
 import GmailButton from '../GmailButton/GmailButton'
 import './first_home_component.css'
 import { motion } from 'framer-motion'
-import { FadeIn, FadeInExtreme } from '../AnimationVariants';
-import Typewriter from "typewriter-effect";
+import { FadeIn, FadeInExtreme } from '../AnimationVariants'
+import Typewriter from 'typewriter-effect'
 
 function First_Home_Component() {
-
   const typeWriteOptions = {
     strings: ['Frontend Dev.', 'Blockchain Dev.', 'Freelancer', 'Student'],
     autoStart: true,
@@ -14,10 +13,9 @@ function First_Home_Component() {
   }
   return (
     <div className="first_home_component">
-
-      <motion.div 
+      <motion.div
         className="home_top_container"
-        variants={FadeIn("down")}
+        variants={FadeIn('down')}
         initial="hidden"
         animate="visible"
       >
@@ -32,17 +30,18 @@ function First_Home_Component() {
             initial="hidden"
             animate="visible"
           >
-            Hello 👋<br /> I'm Krishna Dhingra, <br /> 
-            <span className="typing_text"><Typewriter
-              options={typeWriteOptions}/></span>   
+            Hello 👋
+            <br /> I'm Krishna Dhingra, <br />
+            <span className="typing_text">
+              <Typewriter options={typeWriteOptions} />
+            </span>
           </motion.div>
           <div className="home_text_right"></div>
         </div>
-        <GmailButton/>
+        <GmailButton />
       </div>
     </div>
-
   )
 }
 
-export default First_Home_Component;
+export default First_Home_Component
