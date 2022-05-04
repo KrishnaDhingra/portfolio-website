@@ -1,33 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-body{
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 100vw;
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
-p, h1, h2, h3, h4, h5, h6, span, input, input::placeholder{
-    font-family: 'Poppins', 'sans-serif';
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+input,
+input::placeholder {
+  font-family: 'Poppins', 'sans-serif';
 }
-input{
-    font-weight: 600;
+input {
+  font-weight: 600;
 }
-.container{
-    position: absolute;
-    box-sizing: border-box;
-    margin-left: 200px;
-    width: calc(100vw - 219px);
-    min-height: 100vh;
-
-
+.container {
+  position: absolute;
+  box-sizing: border-box;
+  margin-left: 200px;
+  width: calc(100vw - 219px);
+  min-height: 100vh;
 }
-@media only screen and (max-width: 1200px){
-    .container{
-        position: relative;
-        margin: 0px 0px;
-        width: 100vw;
-        padding: 0rem 5%;
-    }
+@media only screen and (max-width: 1200px) {
+  .container {
+    position: relative;
+    margin: 0px 0px;
+    width: 100vw;
+    padding: 0rem 5%;
+  }
 }

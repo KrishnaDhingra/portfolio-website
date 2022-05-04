@@ -10,7 +10,7 @@ export default function App() {
       opacity: 1,
       transition: {
         pathLength: {
-          delay: 0.3,
+          delay: 0.7,
           type: 'spring',
           duration: duration_delay,
           bounce: 0,
