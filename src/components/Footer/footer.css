@@ -1,3 +1,6 @@
+:root {
+  --small-screen-footer-gap: 1.5rem;
+}
 .footer {
   display: flex;
   justify-content: space-between;
@@ -55,18 +58,25 @@
 }
 @media only screen and (max-width: 530px) {
   .footer {
-    gap: 0rem;
+    flex-direction: row;
+    gap: var(--small-screen-footer-gap);
   }
   .footer section {
-    flex-direction: column;
-    gap: 0rem;
+    gap: var(--small-screen-footer-gap);
     width: 100%;
-    flex: 1;
+    width: max-content;
+    justify-content: space-evenly;
   }
   .section {
-    width: 100%;
-    padding: 2rem 0rem;
+    width: max-content;
+    padding: 1.3rem 1.3rem;
+    border: none;
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
     justify-content: center;
+  }
+  .section span {
+    display: none;
   }
   .section::before {
     display: none;

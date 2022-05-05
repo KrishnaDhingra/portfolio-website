@@ -30,25 +30,7 @@ function Footer() {
             >
               <Tag.tag className="icons"></Tag.tag>
               <span>{Tag.text}</span>
-              {focused === Tag.text ? (
-                <motion.div
-                  transition={{
-                    layout: {
-                      duration: 0.2,
-                      ease: 'easeOut',
-                    },
-                  }}
-                  style={{
-                    position: 'absolute',
-                    height: '100%',
-                    width: '100%',
-                    top: '0',
-                    left: '0',
-                    background: 'rgba(0, 0, 0, 0.2)',
-                  }}
-                  layoutId="highlight"
-                />
-              ) : null}
+              {focused === Tag.text ? <BackgroundFocused /> : null}
             </div>
           )
         })}
@@ -57,40 +39,49 @@ function Footer() {
         <span>Krishna Dhingra</span>
       </div>
       <section>
-        {Tags.map((Tag) => {
+        {Tags2.map((Tag) => {
           return (
             <div
-              onMouseLeave={() => setFocused2(null)}
-              onFocus={() => setFocused2(Tag.text)}
-              onMouseEnter={() => setFocused2(Tag.text)}
+              onMouseLeave={() => setFocused(null)}
+              onFocus={() => setFocused(Tag.text)}
+              onMouseEnter={() => setFocused(Tag.text)}
               className="section"
             >
               <Tag.tag className="icons"></Tag.tag>
               <span>{Tag.text}</span>
-              {focused2 === Tag.text ? (
-                <motion.div
-                  transition={{
-                    layout: {
-                      duration: 0.2,
-                      ease: 'easeOut',
-                    },
-                  }}
-                  style={{
-                    position: 'absolute',
-                    height: '100%',
-                    width: '100%',
-                    top: '0',
-                    left: '0',
-                    background: 'rgba(0, 0, 0, 0.2)',
-                  }}
-                  layoutId="highlight2"
-                />
-              ) : null}
+              {focused === Tag.text ? <BackgroundFocused /> : null}
             </div>
           )
         })}
       </section>
     </main>
+  )
+}
+
+function BackgroundFocused() {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: {
+          duration: 0.1,
+          layout: {
+            duration: 0.2,
+            ease: 'easeOut',
+          },
+        },
+      }}
+      style={{
+        position: 'absolute',
+        height: '100%',
+        width: '100%',
+        top: '0',
+        left: '0',
+        background: 'rgba(0, 0, 0, 0.2)',
+      }}
+      layoutId="highlight"
+    />
   )
 }
 
